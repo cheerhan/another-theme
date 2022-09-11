@@ -1,7 +1,7 @@
 ### your site title here
 
-title: Your Name
-description: subtitle | affiliations | motto
+title: Cheer Han
+description: I tried to change the font...
 
 baseurl: "/another-theme" #name of GitHub repository
 url: "https://cheerhan.github.io" #custom url to be used instead of GitHub repository
@@ -17,12 +17,13 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-facebook: "#"
-twitter: "#"
-linkedin: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
+instagram: "hanjlm"
+weibo: "cheer1124"
+# twitter: "#"
+# linkedin: "#"
+# github: "#"
+# researchgate: "#"
+# orcid: "#"
 
 highlighter: rouge
 markdown: kramdown
