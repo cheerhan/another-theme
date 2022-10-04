@@ -1,7 +1,7 @@
 ---
 title:
 layout: default
-permalink: /projects/
+permalink: /projects/data/
 published: true
 ---
 
@@ -10,8 +10,7 @@ published: true
 
 	<div class="gallery">
 
-
-  {% for project in site.projects %}
+  {% for project in site.data_projects %}
 
   {% if project.redirect %}
   <div class="projectTile">

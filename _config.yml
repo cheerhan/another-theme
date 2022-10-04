@@ -1,7 +1,7 @@
 ### your site title here
 
 title: Cheer Han
-description: I tried to change the font...
+description: I changed description.....
 
 baseurl: "/another-theme" #name of GitHub repository
 url: "https://cheerhan.github.io" #custom url to be used instead of GitHub repository
@@ -47,6 +47,12 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  data_projects:
+    output: true
+    permalink: /projects/data/:path/ 
+  product_projects:
+    output: true
+    permalink: /projects/product/:path/
 
 sass:
   sass_dir: /assets/css/_sass
