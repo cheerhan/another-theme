@@ -3,14 +3,20 @@ layout: about
 permalink: /
 profile:
   align: right
-  image: profile.png
+  image: IMG_2550.JPG
 published: true
 ---
 
-[Gradfolio](https://github.com/jitinnair1/gradfolio){:target="_blank"} is a responsive, dark-mode ready Jekyll theme designed keeping academia in mind. The easiest way to install the theme is to fork it using GitHub. Check the README file for [instructions](https://github.com/jitinnair1/gradfolio#installation){:target="_blank"}.
+我？就是一个普通人呢！
 
-If you want to use this space to write your biography here, edit the `index.md` file. You can put a picture in, too. Rename your picture to `profile.png` and put it in the `assets/images/` folder.
+最近对我影响比较大的是李永乐老师在凉子的采访视频，他讲述了一个普通人求识之路，就是花时间去钻研，这是由外向内的过程，去探索什么事情可以让我感受到真的平静和快乐。
 
-The social-icons footer can be used to link profiles from GitHub, OrcID and ReasearchGate aprart form the usual Twitter, LinkedIn and Facebook. You can add your user ID in the `_config.yml` file to link your accounts.
+关于我的工作经历，可以了解一下最近[关于我成为一个数据产品经理所做的努力]({% link _posts/2022-10-05-关于我成为一个数据产品经理所做的努力.md %})，以及我第二份工作给我带来的[职场PTSD]({% link _posts/2017-03-21-职场PTSD.md %})。
 
-[数据类项目]({% link _pages/data-projects.md %})
+关于我参与过的项目: [数据类项目]({% link _pages/data-projects.md %})、[产品类项目]({% link _pages/product-projects.md %})、[设计类项目]({% link _pages/data-projects.md %})
+
+关于这个博客主题：[Gradfolio](https://github.com/jitinnair1/gradfolio){:target="_blank"} 
+
+
+
+

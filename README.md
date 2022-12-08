@@ -31,3 +31,7 @@ Once you have personalised and tested the site, you can create a new repo, uploa
 MIT License
 
 [![JekyllThemes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com)
+
+## Some commands
+
+bundle exec jekyll server --livereload
