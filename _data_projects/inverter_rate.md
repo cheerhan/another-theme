@@ -4,11 +4,9 @@ title: 逆变器转换效率
 description: another project
 ---
 
-================
+记录一些做关于逆变器数据可视化分析内容。实现目的，通过绘制效率曲线找出相对表现较差的设备，并尝试分析原因。
 
-记录一些做关于逆变器数据可视化分析内容
-
-## 逆变器转换效率曲线
+## 逆变器转换效率曲线说明
 
 逆变器转换效率的特点：
 
@@ -16,9 +14,7 @@ description: another project
 2.  实际输出功率相同，输入电压不同时，转换效率也不同
 3.  理论上，每条效率曲线都有一个最大值，即为逆变器的最大转换效率
 
-实现目的，通过绘制效率曲线找出相对表现较差的设备，并尝试分析原因。
-不应该是分析原因，而是应该能够检测这段时间有个修复，数据恢复正常了。目前能做的也是这些。
-需要解决的问题是，实时数据可暴露的问题，例如告警故障；再是统计量可暴露的问题，例如发电量低，有对应的遮挡等内容；再是整体性能较差。
+以下述电站为例进行相关分析。
 
 ``` r
 station<-"哈尔滨聚合"
@@ -26,7 +22,9 @@ month<-7
 source("~/R/forecast/app/set/deviceRateCo.R")
 ```
 
-## 不同年份相同月份效率曲线的差异
+### 不同年份相同月份效率曲线的差异
+
+通过不同年份相同月份数据可见。第一年数据不稳定，之后转换效率逐年下降。
 
 ``` r
 g<-ggplot(data,aes(x=load, y=convert,color=device_name)) +
@@ -42,7 +40,7 @@ htmlwidgets::saveWidget(plotly::ggplotly(g),"month_rate.html")
 ```
 <iframe src="{{site.baseurl}}/assets/inverter_rate/month_rate.html" height="400px" width="100%"></iframe>
 
-## 每台设备在不同年份的负荷率分布
+### 每台设备在不同年份的负荷率分布
 
 目前我绘制的这个图根本看不出来啥。
 
@@ -61,8 +59,6 @@ htmlwidgets::saveWidget(plotly::ggplotly(g),"device_month_rate.html")
 <iframe src="{{site.baseurl}}/assets/inverter_rate/device_month_rate.html" height="600px" width="100%"></iframe>
 
 ## 找到一个统计量来描述逆变器效率低
-
-从第一张图可以看到NB04，负载率越来越高，转换效率在下降的。从下表可以看出：
 
 ### 平均值
 
@@ -202,3 +198,5 @@ min_avg<-rate%>%arrange(rate)
 ```
 
 -   按照拟合曲线，效率最低的设备是 \#4
+
+通过平均值、中位数、行业中国效率、拟合曲线效率结算结果表现最差的设备是一致的。
